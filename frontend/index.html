@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MF Subscription Reconciliation</title>
+    <!-- Prevent flash of wrong theme before React mounts -->
+    <script>
+      (function () {
+        var t = localStorage.getItem('mf_theme') || 'dark';
+        if (t === 'dark') {
+          document.documentElement.classList.add('dark');
+          document.documentElement.style.backgroundColor = '#1A2035';
+        } else {
+          document.documentElement.style.backgroundColor = '#EEF2FF';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
